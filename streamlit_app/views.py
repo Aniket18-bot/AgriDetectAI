@@ -1019,7 +1019,8 @@ def dashboard_page():
         model_options = {
             "Rice & Potato": "rice_potato",
             "Corn & Blackgram": "corn_blackgram",
-            "Cotton & Tomato": "cotton_tomato"
+            "Cotton & Tomato": "cotton_tomato",
+            "Pumpkin & Wheat": "pumpkin_wheat"
         }
 
         selected_display_name = st.selectbox(
@@ -1088,7 +1089,7 @@ def dashboard_page():
                             st.balloons()
                         else:
                             st.error(f"**Detected: {predicted_label.upper()}**")
-
+                        
                         st.caption(f"Confidence: {confidence:.2f}%")
                         st.progress(int(confidence))
 
